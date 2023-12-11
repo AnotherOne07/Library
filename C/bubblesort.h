@@ -1,12 +1,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdbool.h>
+# include "help.h"
 
-void swap(int* xp, int* yp){
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
-}
 
 void bubbleSort(int arr[], int len){
     // Loop Integer

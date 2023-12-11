@@ -7,3 +7,9 @@ void printArr(int arr[], int len){
         printf("%d ", arr[i]);
     }
 }
+
+void swap(int *arr, int i, int j) {
+  int temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
