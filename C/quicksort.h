@@ -32,19 +32,19 @@ int partition(int *arr, int low, int high) {
 // arr[] --> array to be sorted,
 // low --> Starting index
 // high --> Ending index
-void quickSort(int* arr, int low, int high){
-    int partitionIndex;
-    
-    if(low < high){
-        // pi is partitioning index, arr[p] is now at right place
-        partitionIndex = partition(arr, high, low); 
+void quickSort(int *arr, int low, int high) {
+  int partitionIndex;
 
-        // Separately sort elements before
-        // and after partition index
-        // it does it recursively
-        quickSort(arr, low, pi - 1); // Starting index and partitioned index minus 1
-        quickSort(arr, pi + 1, high); // Partitioned index plus 1 and ending index
-    }
+  if (low < high) {
+    // pi is partitioning index, arr[p] is now at right place
+    partitionIndex = partition(arr, low, high);
+
+    // Separately sort elements before
+    // and after partition index
+    // it does it recursively
+    quickSort(arr, low, partitionIndex - 1); // Starting index and partitioned index minus 1
+    quickSort(arr, partitionIndex + 1, high); // Partitioned index plus 1 and ending index
+  }
 }
 
 void quickSortByLastElement(int* arr){
@@ -54,4 +54,15 @@ void quickSortByLastElement(int* arr){
     printf("%d", n);
 }
 
+// int main() {
+//   int arr[] = {10, 7, 8, 9, 1, 5};
+//   int N = 6;
 
+//   // Function call
+//   printf("Sorted array:");
+//   quickSort(arr, 0, N - 1);
+//   for (int i = 0; i < N; i++)
+//     printf(" %d", arr[i]);
+
+//   return 0;
+// }
