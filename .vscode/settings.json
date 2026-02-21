@@ -3,5 +3,6 @@
         "*.embeddedhtml": "html",
         "stdio.h": "c",
         "help.h": "c"
-    }
+    },
+    "python-envs.pythonProjects": []
 }
